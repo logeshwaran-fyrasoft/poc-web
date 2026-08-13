@@ -60,12 +60,11 @@ export default async function HomePage() {
       <div style={{ textAlign: "center", padding: "4px", fontSize: 12, color: "#999" }}>
         Hero/Best Sellers (time-based, revalidate 30s) last updated: {formatIST(timedData.lastUpdated)}
       </div>
-      <div style={{ textAlign: "center", padding: "4px", fontSize: 12 }}>
-        <RevalidateCountdown lastUpdatedISO={timedData.lastUpdated} />
-      </div>
       <div style={{ textAlign: "center", padding: "4px", fontSize: 12, color: "#999" }}>
         Pooja Essentials (on-demand only) last updated: {formatIST(onDemandData.lastUpdated)}
       </div>
+
+      <RevalidateCountdown lastUpdatedISO={timedData.lastUpdated} />
       <LiveClock />
       <Footer />
     </>
